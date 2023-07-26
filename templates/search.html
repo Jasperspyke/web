@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Page Title{% endblock %}
+
+{% block content %}
+
+{% if searched %}
+    <h1>Search Results</h1>
+{% else %}
+        <h1>Search for an Article</h1>
+        <br/>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.searched.label }} {{ form.searched(size=30) }}
+            {{ form.submit() }}
+        </form>
+
+{% endif %}
+    <p>{{ data | safe }}.</p>
+{% endblock %}

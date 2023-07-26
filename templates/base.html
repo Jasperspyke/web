@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Page Title{% endblock %}</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation Bar Styles */
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex; /* Use flexbox for alignment */
+      justify-content: flex-start; /* Align items to the left */
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px; /* Add right margin between links */
+      padding: 10px;
+    }
+
+    /* Centered Body Text Styles */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="search">Search</a>
+    <a href="services">Services</a>
+    <a href="contact#">Contact</a>
+  </nav>
+
+  <!-- Content from child templates will be inserted here -->
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
