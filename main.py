@@ -30,9 +30,9 @@ def search():
         return render_template('search.html', searched=searched, form=form, data=new_data)
 
     return render_template('search.html', searched=searched, form=form, data=initial_data_html)
-@app.route('/search', methods = ['POST', 'GET'])
+@app.route('/contact', methods = ['POST', 'GET'])
 def contact():
-    return render_template()
+    return render_template('contact.html')
 
 app.run(debug=True)
 
