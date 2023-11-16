@@ -1,18 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}
-    My Custom Page Title
-{% endblock %}
+{% block title %}Page Title{% endblock %}
 
 {% block content %}
-   <div class="container">
-    <h1>Welcome to our Simple Homepage</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis ultrices mauris, nec sagittis quam rhoncus vel. Proin nec erat justo. In hac habitasse platea dictumst.</p>
-  </div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vintage Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #000;
+            margin: 25px;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Vintage Website</h1>
+            <p>Step back in time with a touch of 90s nostalgia</p>
+        </header>
+
+        <section class = "banner">
+            <div class = "banner-main-content">
+                <h2>GET THE WORLD'S LATEST TECH NEWS</h2>
+                <h3>World's Leading Tech News Portal</h3>
+
+        <article>
+            <div>
+                <h2>Here's how to track your stimulus check with the IRS Get My Payment Portal</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus?</p>
+
+                <a href = "#">Read More <span>>></span></a>
+            </div>
+            <img src = "static/desantis.png">
+
+        </article>
+                        <article>
+            <div>
+                <h2>The best outdoor games to play with your family</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus?</p>
+
+                <a href = "#">Read More <span>>></span></a>
+            </div>
+            <img src = "static/pressconference.png">
+        </article>
+
+
+        <div class="container_x">
+            <p>© 2020 My Vintage Website</p>
+            <a href="https://twitter.com/tomhilliard?lang=en"><img src="static/twitter.png" alt="Tom's Twitter" style="width:42px;height:42px;"></a>
+        </div>
+    <footer>
+
+
+
+        </div>
+    </footer>
 </body>
 </html>
 
 {% endblock %}
-  <!-- Centered Body Text -->
+

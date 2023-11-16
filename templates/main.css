@@ -1,0 +1,121 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --heading: 'Montserrat', sans-serif;
+    --text-color: #000; /* Set the default text color */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #fff;
+}
+
+/* Global Styling */
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+hr {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.top-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: #252525;
+    color: #fff;
+    padding: 20px 30px;
+}
+
+.top-head .fas {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* JS Related Styling */
+.times-btn {
+    display: none;
+}
+
+.nav-bar {
+    background: #333;
+    height: 0;
+    overflow: hidden;
+}
+
+.show-nav {
+    height: auto;
+}
+
+/* ... (Continue with the rest of the CSS) */
+
+@media(max-width: 460px) {
+    .hot-topic-content h2 {
+        font-size: 16px;
+    }
+
+    .main-container-right article {
+        display: block;
+    }
+
+    .main-container-right article img {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .main-container-right article {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* ... (Continue with the rest of the media queries) */
+
+}
+
+@media(min-width: 768px) {
+    .banner-sub-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-bottom-left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 800px) {
+    /* ... (Continue with the rest of the media queries) */
+}
+
+@media(min-width: 992px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1080px) {
+    .banner {
+        grid-template-columns: 1fr 2fr;
+    }
+}

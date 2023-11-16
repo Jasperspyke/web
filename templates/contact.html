@@ -2,33 +2,94 @@
 
 {% block content %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Contact Card - Tom Hilliard</title>
     <style>
+        /* Your existing styles here */
+
         .contact-card {
             border: 1px solid #ccc;
-            padding: 10px;
-            width: 300px;
-            margin: 20px auto;
+            padding: 39px; /* Increase padding for more space around content */
+            width: 520px; /* Increase the overall width */
+            margin: 26px auto; /* Adjust margin for centering */
             font-family: Arial, sans-serif;
             text-align: center;
         }
         .contact-card h2 {
             margin-top: 0;
+            font-size: 30px; /* Increase font size */
         }
         .contact-card p {
-            margin: 5px 0;
+            margin: 7px 0; /* Adjust margin for spacing between paragraphs */
+            font-size: 18px; /* Increase font size */
         }
+        .contact-card img {
+            width: 260px; /* Increase the image size */
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 12.5%;
+            padding: 5px;
+            margin-bottom: 10px;
+            margin-left: 50px;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px; /* Adjust as needed to move it below other elements */
+            width: 3.5%; /* Make the button take full width */
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+
+
     </style>
 </head>
 <body>
     <div class="contact-card">
-        <img src="static/ken.png" alt="Tom Hilliard's Avatar" width="100">
+        <img src="static/ken.png" alt="Tom Hilliard's Avatar" width="260">
         <h2>Tom Hilliard</h2>
         <p>Phone: 123-456-7890</p>
         <p>Email: tom.hilliard@example.com</p>
     </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="{{ url_for('contact') }}" method="post">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
 </body>
 </html>
 {% endblock %}
