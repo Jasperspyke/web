@@ -3,6 +3,8 @@ import flask_wtf
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import pandas as pd
+import smtplib
+from email.mime.text import MIMEText
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'my_secret'
 
@@ -70,25 +72,17 @@ def send_email(full_name, email, message):
 def search():
     searched = None
     form = SearchForm()
-    data = pd.read_csv('databases/Entitled - Sheet1.csv')
-    initial_data_html = data
     if form.validate_on_submit():
         searched = form.searched.data
         form.searched.data = ''
-        new_data = filter_by_keyword(data, searched)
-        return render_template('search.html', searched=searched, form=form, data=new_data)
+        return render_template('search.html', searched=searched, form=form)
 
-    return render_template('search.html', searched=searched, form=form, data=initial_data_html)
+    return render_template('search.html', searched=searched, form=form)
 
-@app.route('/process_data', methods=['POST'])
-def process_data():
-    form = SearchForm()
-    data = pd.read_csv('databases/Entitled - Sheet1.csv')
-    searched = request.form['searched']
-    new_data = filter_by_keyword(data, searched)
-    print(new_data)
-    return render_template('search.html', form=form, searched=searched, data=new_data)
 
+@app.route('/Consulting', methods=['POST', 'GET'])
+def consulting():
+    return render_template('consulting.html')
 @app.route('/contact', methods = ['POST', 'GET'])
 def test():
     return render_template('test.html')
